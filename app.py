@@ -10,11 +10,11 @@ try:
     st.session_state.chat = model.start_chat(history=[])
     st.title('Gemini Pro Test')
 
-  def role_to_steamlit(role:str) -> str:
+  def role_to_streamlit(role: str) -> str:
     if role == "model":
-      return "assistant"
+        return "assistant"
     else: 
-      return role
+        return role
 
   for message in st.session_state.chat.history:
     with st.chat_message(role_to_streamlit(message.role)):
